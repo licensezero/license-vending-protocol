@@ -1,0 +1,20 @@
+---
+type: object
+required: [schema, offers]
+additionalProperties: false
+properties:
+  schema:
+    const: "https://TODO.com/schemas/metadata/1.0.0.json"
+  offers:
+    type: array
+    items:
+      type: object
+      required: [id, api]
+      properties:
+        id:
+          type: string
+          pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        api:
+          type: string
+          format: uri
+          pattern: "^https://"

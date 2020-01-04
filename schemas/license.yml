@@ -1,0 +1,92 @@
+---
+type: object
+required: [schema, publicKey, signature, metadata]
+additionalProperties: false
+properties:
+  schema:
+    const: "https://TODO.com/schemas/license/1.0.0.json"
+  publicKey:
+    title: Ed25519 Public Key
+    type: string
+    pattern: "^[0-9a-f]{64}$"
+  signature:
+    title: Ed25519 Detached Signature
+    type: string
+    pattern: "^[0-9a-f]{128}$"
+  metadata:
+    type: object
+    required: [date, licensor, licensee, price, term]
+    additionalProperties: false
+    properties:
+      date:
+        type: string
+        format: date-time
+      form:
+        type: string
+        format: uri
+        pattern: "^https://"
+      order:
+        title: UUIDv4
+        type: string
+        pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+      licensee:
+        type: object
+        required: [email, jurisdiction, name]
+        additionalProperties: false
+        properties:
+          email:
+            type: string
+            format: email
+          jurisdiction:
+            type: string
+            pattern: "^[A-Z]{2}-[0-9A-Z]{2,3}$"
+            examples: [US-CA]
+          name:
+            type: string
+            minLength: 3
+            examples: [John Doe]
+      licensor:
+        type: object
+        required: [email, jurisdiction, name, id]
+        additionalProperties: false
+        properties:
+          email:
+            type: string
+            format: email
+          jurisdiction:
+            type: string
+            pattern: "^[A-Z]{2}-[0-9A-Z]{2,3}$"
+            examples: [US-CA]
+          name:
+            type: string
+            minLength: 3
+            examples: [John Doe]
+          id:
+            title: UUIDv4
+            type: string
+            pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+      price:
+        type: object
+        required: [amount, currency]
+        additionalProperties: false
+        properties:
+          amount:
+            title: purchase price
+            type: integer
+            minimum: 0
+            examples: [0, 100]
+          currency:
+            title: purchase price ISO 4217 currency code
+            type: string
+            pattern: "^[A-Z]{3}$"
+            examples: [USD, EUR]
+      term:
+        oneOf:
+          - const: perpetual
+          - title: expiration date
+            type: string
+            format: date-time
+  text:
+    title: license text
+    type: string
+    minLength: 1
