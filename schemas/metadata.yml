@@ -20,7 +20,9 @@ properties:
           type: string
           format: uri
           pattern: "^https://"
+          examples: [https://api.licensezero.com]
         public:
           title: publice license identifier
           type: string
-          pattern: "^[A-Za-z0-9-]+"
+          pattern: "^[A-Za-z0-9-.]+"
+          examples: [Parity-7.0.0]
