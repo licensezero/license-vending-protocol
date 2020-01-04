@@ -42,6 +42,7 @@ properties:
                 type: string
                 format: email
               jurisdiction:
+                title: ISO 3166-2
                 type: string
                 pattern: "^[A-Z]{2}-[0-9A-Z]{2,3}$"
                 examples: [US-CA]
@@ -58,6 +59,7 @@ properties:
                 type: string
                 format: email
               jurisdiction:
+                title: ISO 3166-2
                 type: string
                 pattern: "^[A-Z]{2}-[0-9A-Z]{2,3}$"
                 examples: [US-CA]
