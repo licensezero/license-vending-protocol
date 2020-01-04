@@ -15,9 +15,9 @@ properties:
     pattern: "^[0-9a-f]{128}$"
   license:
     type: object
-    required: [metadata, text]
+    required: [meta, text]
     properties:
-      metadata:
+      meta:
         type: object
         required: [api, date, licensor, licensee, price, term]
         additionalProperties: false
