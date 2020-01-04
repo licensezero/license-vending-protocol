@@ -19,9 +19,13 @@ properties:
     properties:
       metadata:
         type: object
-        required: [date, licensor, licensee, price, term]
+        required: [api, date, licensor, licensee, price, term]
         additionalProperties: false
         properties:
+          api:
+            type: string
+            format: url
+            pattern: "^https://"
           date:
             type: string
             format: date-time
@@ -92,6 +96,24 @@ properties:
               - title: expiration date
                 type: string
                 format: date-time
+          vendor:
+            type: object
+            required: [name, jurisdiction, url]
+            additionalProperties: false
+            properties:
+              name:
+                type: string
+                minLength: 3
+                example: [Artless Devices LLC]
+              jurisdiction:
+                title: ISO 3166-2
+                type: string
+                pattern: "^[A-Z]{2}-[0-9A-Z]{2,3}$"
+                examples: [US-CA]
+              url:
+                type: string
+                format: url
+                pattern: "^https://"
       text:
         title: license text
         type: string

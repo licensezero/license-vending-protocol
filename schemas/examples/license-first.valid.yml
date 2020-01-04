@@ -4,6 +4,7 @@ publicKey: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 signature: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 license:
   metadata:
+    api: "https://api.licensezero.com"
     date: !!str 2018-11-13T20:20:39+00:00
     form: "https://forms.licensezero.com/private/1.0.0"
     order: 2c743a84-09ce-4549-9f0d-19d8f53462bb
@@ -20,4 +21,8 @@ license:
       amount: 1000
       currency: USD
     term: perpetual
+    vendor:
+      name: Artless Devices LLC
+      jurisdiction: US-CA
+      url: "https://artlessdevices.com"
   text: Fake license text.
