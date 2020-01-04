@@ -85,6 +85,7 @@ properties:
               currency:
                 title: purchase price ISO 4217 currency code
                 $ref: "#/definitions/iso4217"
+                examples: [USD]
           term:
             oneOf:
               - const: perpetual
