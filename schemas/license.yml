@@ -27,8 +27,7 @@ properties:
             format: url
             pattern: "^https://"
           date:
-            type: string
-            format: date-time
+            $ref: "#/definitions/time"
           form:
             type: string
             format: uri
@@ -89,9 +88,7 @@ properties:
           term:
             oneOf:
               - const: perpetual
-              - title: expiration date
-                type: string
-                format: date-time
+              - $ref: "#/definitions/time"
           vendor:
             type: object
             required: [name, jurisdiction, url]
@@ -5396,3 +5393,7 @@ definitions:
       - ZW-MS
       - ZW-MV
       - ZW-MW
+  time:
+    type: string
+    format: date-time
+    pattern: "Z$"
