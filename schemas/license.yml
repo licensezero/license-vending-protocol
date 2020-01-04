@@ -115,7 +115,9 @@ properties:
         title: license text
         type: string
         minLength: 1
+
 definitions:
+
   iso4217:
     enum:
       - AED
@@ -297,6 +299,7 @@ definitions:
       - ZAR
       - ZMW
       - ZWL
+
   iso31662:
     enum:
       - AD-02
@@ -5398,6 +5401,7 @@ definitions:
       - ZW-MS
       - ZW-MV
       - ZW-MW
+
   time:
     type: string
     format: date-time
