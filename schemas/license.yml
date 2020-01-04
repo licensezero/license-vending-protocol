@@ -92,9 +92,12 @@ properties:
               - $ref: "#/definitions/time"
           vendor:
             type: object
-            required: [name, jurisdiction, url]
+            required: [email, name, jurisdiction, url]
             additionalProperties: false
             properties:
+              email:
+                type: string
+                format: email
               name:
                 type: string
                 minLength: 3
