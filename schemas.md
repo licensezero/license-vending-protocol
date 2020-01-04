@@ -9,3 +9,17 @@ If the manifest format for the artifact supports arbitrary additional data, lice
 ## Licenses
 
 Licenses indicate that a user has bought a license for an artifact.
+
+## Standards
+
+Schemas use a number of standards:
+
+- Ed25519 for public-key signatures
+
+- UUIDv4 for random identifiers
+
+- ISO 8601 for time strings
+
+- ISO 3166 for country subdivision codes
+
+- ISO 4217 for currency codes
