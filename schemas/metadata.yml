@@ -10,6 +10,7 @@ properties:
     items:
       type: object
       required: [id, api]
+      additionalProperties: false
       properties:
         id:
           title: UUIDv4 offer identifier
