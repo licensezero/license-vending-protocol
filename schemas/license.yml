@@ -98,7 +98,7 @@ properties:
             properties:
               email:
                 type: string
-                format: email,
+                format: email
               name:
                 type: string
                 minLength: 3
