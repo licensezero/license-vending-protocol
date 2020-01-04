@@ -78,7 +78,7 @@ properties:
             additionalProperties: false
             properties:
               amount:
-                title: purchase price
+                title: purchase price in minor units of currency
                 type: integer
                 minimum: 0
                 examples: [0, 100]
