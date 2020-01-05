@@ -1,0 +1,3 @@
+- perpetual licenses
+- site licenses
+- subscriptions
