@@ -1,3 +1,4 @@
-- perpetual licenses
 - site licenses
+- individual licenses
+- perpetual licenses
 - subscriptions
