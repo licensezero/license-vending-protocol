@@ -4,7 +4,7 @@ required: [schema, publicKey, signature, license]
 additionalProperties: false
 properties:
   schema:
-    const: "https://TODO.com/schemas/license/1.0.0.json"
+    const: "https://TODO.com/schemas/receipt/1.0.0.json"
   publicKey:
     title: Ed25519 Public Key
     type: string

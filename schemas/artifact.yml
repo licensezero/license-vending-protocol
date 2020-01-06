@@ -4,7 +4,7 @@ required: [schema, offers]
 additionalProperties: false
 properties:
   schema:
-    const: "https://TODO.com/schemas/metadata/1.0.0.json"
+    const: "https://TODO.com/schemas/artifact/1.0.0.json"
   offers:
     type: array
     items:
