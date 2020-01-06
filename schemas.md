@@ -18,8 +18,10 @@ Schemas use a number of standards:
 
 - UUIDv4 for random identifiers
 
-- ISO 8601 for time strings
+- ISO 8601 for date-and-time strings
 
 - ISO 3166 for country subdivision codes
 
 - ISO 4217 for currency codes
+
+- POSIX utility argument syntax for CLI
