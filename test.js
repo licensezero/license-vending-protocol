@@ -9,7 +9,7 @@ var BASE = 'https://example.com/schemas/'
 
 var ajv = new AJV()
 
-var subschemas = ['iso4217', 'iso31662', 'time', 'url']
+var subschemas = ['iso4217', 'iso31662', 'time', 'url', 'price']
 subschemas.forEach(function (name) {
   var basename = name + '.yml'
   var yml = fs.readFileSync(path.join('schemas', basename), 'utf8')

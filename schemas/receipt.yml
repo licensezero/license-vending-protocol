@@ -69,19 +69,7 @@ properties:
                 type: string
                 format: uuid
           price:
-            type: object
-            required: [amount, currency]
-            additionalProperties: false
-            properties:
-              amount:
-                title: purchase price in minor units of currency
-                type: integer
-                minimum: 0
-                examples: [0, 100]
-              currency:
-                title: purchase price ISO 4217 currency code
-                $ref: "https://example.com/schemas/iso4217.json"
-                examples: [USD]
+            $ref: https://example.com/schemas/price.json
           expires:
             $ref: "https://example.com/schemas/time.json"
           vendor:

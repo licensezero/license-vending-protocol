@@ -1,0 +1,14 @@
+---
+type: object
+required: [amount, currency]
+additionalProperties: false
+properties:
+  amount:
+    title: purchase price in minor units of currency
+    type: integer
+    minimum: 1
+    examples: [0, 100]
+  currency:
+    title: purchase price ISO 4217 currency code
+    $ref: "https://example.com/schemas/iso4217.json"
+    examples: [USD]
