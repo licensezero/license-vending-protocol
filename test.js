@@ -5,7 +5,17 @@ var path = require('path')
 var tape = require('tape')
 var yaml = require('js-yaml')
 
+var BASE = 'https://example.com/schemas/'
+
 var ajv = new AJV()
+
+var subschemas = ['iso4217', 'iso31662', 'time', 'url']
+subschemas.forEach(function (name) {
+  var basename = name + '.yml'
+  var yml = fs.readFileSync(path.join('schemas', basename), 'utf8')
+  var schema = yaml.safeLoad(yml)
+  ajv.addSchema(schema, BASE + name + '.json')
+})
 
 var schemas = {}
 
