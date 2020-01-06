@@ -15,7 +15,7 @@ properties:
         id:
           title: UUIDv4 offer identifier
           type: string
-          pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          format: uuid
         api:
           title: licensing API
           type: string
@@ -23,7 +23,7 @@ properties:
           pattern: "^https://"
           examples: [https://api.licensezero.com]
         public:
-          title: publice license identifier
+          title: public license identifier
           type: string
           pattern: "^[A-Za-z0-9-.]+"
           examples: [Parity-7.0.0]
