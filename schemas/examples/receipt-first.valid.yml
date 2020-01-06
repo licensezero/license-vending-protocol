@@ -1,11 +1,11 @@
 ---
-schema: "https://TODO.com/schemas/license/1.0.0.json"
+schema: "https://TODO.com/schemas/receipt/1.0.0.json"
 publicKey: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 signature: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 license:
   meta:
     api: "https://api.licensezero.com"
-    date: !!str 2018-11-13T20:20:39Z
+    effective: !!str 2018-11-13T20:20:39Z
     form: "https://forms.licensezero.com/private/1.0.0"
     order: 2c743a84-09ce-4549-9f0d-19d8f53462bb
     licensee:
@@ -20,7 +20,6 @@ license:
     price:
       amount: 1000
       currency: USD
-    term: perpetual
     vendor:
       email: support@artlessdevices.com
       name: Artless Devices LLC

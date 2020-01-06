@@ -19,14 +19,14 @@ properties:
     properties:
       meta:
         type: object
-        required: [api, date, licensor, licensee, price, term]
+        required: [api, effective, licensor, licensee]
         additionalProperties: false
         properties:
           api:
             type: string
             format: url
             pattern: "^https://"
-          date:
+          effective:
             $ref: "#/definitions/time"
           form:
             type: string
@@ -86,10 +86,8 @@ properties:
                 title: purchase price ISO 4217 currency code
                 $ref: "#/definitions/iso4217"
                 examples: [USD]
-          term:
-            oneOf:
-              - const: perpetual
-              - $ref: "#/definitions/time"
+          expires:
+            $ref: "#/definitions/time"
           vendor:
             description: information on the party that sold the license, such as an agent or reseller, if the licensor did not sell the license themself
             type: object
